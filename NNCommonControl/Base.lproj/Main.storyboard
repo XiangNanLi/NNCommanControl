@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7HL-aL-zs1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="xHG-o7-pJW">
+            <objects>
+                <tableViewController id="Vix-Gz-asc" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pss-aa-8aJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="wRB-ra-2X3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="xtN-Sg-3lZ" style="IBUITableViewCellStyleDefault" id="Hn9-ln-FhS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hn9-ln-FhS" id="Wb9-HC-B5G">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="可复制文本的Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xtN-Sg-3lZ">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0Pk-7H-t2u" kind="show" id="8iF-ZF-RAP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Vix-Gz-asc" id="sC2-1l-eal"/>
+                            <outlet property="delegate" destination="Vix-Gz-asc" id="Ypb-NP-0px"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="2fC-Em-GyW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGK-Wh-EHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="242"/>
+        </scene>
+        <!--Copy Label View Controller-->
+        <scene sceneID="fgM-hJ-QVT">
+            <objects>
+                <viewController id="0Pk-7H-t2u" customClass="NNCopyLabelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lIJ-NJ-63E"/>
+                        <viewControllerLayoutGuide type="bottom" id="6bR-lx-fDt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jLf-u6-LGy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可复制文本的Label，长按复制" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-2N-Asv" customClass="NNCopyLabel">
+                                <rect key="frame" x="71" y="104" width="232.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请粘贴复制文本" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MiM-Zt-X8A">
+                                <rect key="frame" x="71.5" y="145" width="232.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MiM-Zt-X8A" firstAttribute="top" secondItem="xLT-2N-Asv" secondAttribute="bottom" constant="20" id="1n7-1Z-j6E"/>
+                            <constraint firstItem="MiM-Zt-X8A" firstAttribute="centerX" secondItem="jLf-u6-LGy" secondAttribute="centerX" id="Hc8-v1-FxF"/>
+                            <constraint firstItem="MiM-Zt-X8A" firstAttribute="width" secondItem="xLT-2N-Asv" secondAttribute="width" id="Jyk-Ja-JYN"/>
+                            <constraint firstItem="xLT-2N-Asv" firstAttribute="centerX" secondItem="jLf-u6-LGy" secondAttribute="centerX" id="cYg-Yv-DKo"/>
+                            <constraint firstItem="xLT-2N-Asv" firstAttribute="top" secondItem="lIJ-NJ-63E" secondAttribute="bottom" constant="40" id="eaG-d8-DUe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5T-dc-xYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xwO-ak-gXZ">
+            <objects>
+                <navigationController id="7HL-aL-zs1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1xX-aB-K1U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vix-Gz-asc" kind="relationship" relationship="rootViewController" id="BaT-Ns-koz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSc-ml-kav" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="242"/>
+        </scene>
+    </scenes>
+</document>
